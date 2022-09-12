@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
-import headshot from "../images/headshot.png";
+import headshot from "../images/headshot.svg";
+import thankYou from "../images/thank-you-headshot.svg";
 import downArrow from "../images/down-arrow.svg";
 
 function FadeInHero(props) {
@@ -59,7 +60,7 @@ export default function Hero() {
               </li>
               <li>
                 <a onClick={checkBox} href="#resume">
-                  Resume
+                  Resumé
                 </a>
               </li>
             </ul>
@@ -76,8 +77,8 @@ export default function Hero() {
         <a href="#contact" className="hero--link">
           Contact
         </a>
-        <a href="#contact" className="hero--link">
-          Resume
+        <a href="#root" className="hero--link">
+          <button className="hero--resume-btn">Resumé</button>
         </a>
       </div>
       <FadeInHero>
@@ -101,13 +102,23 @@ export default function Hero() {
             </p>
           </div>
           <div className="hero--headshot">
-            <img src={headshot} alt="Leo's illustrated headshot"></img>
+            <img
+              id="leo-thank-you"
+              className="leo-thanks hidden"
+              src={thankYou}
+              alt="Leo's illustrated headshot with a speech bubble saying thank you for contacting me."
+            ></img>
+            <img
+              id="leo"
+              className="leo-headshot"
+              src={headshot}
+              alt="Leo's illustrated headshot"
+            ></img>
           </div>
         </div>
       </FadeInHero>
-
       <div className="hero--down-arrow">
-        <img src={downArrow} alt="Scroll down arrow, non-clickable"></img>
+        <img src={downArrow} alt="Scroll down arrow, non-clickable" />
       </div>
     </div>
   );

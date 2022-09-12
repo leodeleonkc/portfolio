@@ -4,9 +4,38 @@ import github from "../images/github.svg";
 import youtube from "../images/youtube.svg";
 
 export default function Contact() {
-  const [name, setName] = useState("");
-  const [email, setEmail] = useState("");
-  const [message, setMessage] = useState("");
+  const [status, setStatus] = useState("Send Message");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setStatus("Sending...");
+
+    const { name, email, message } = e.target.elements;
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    let response = await fetch("http://localhost:5006/components/Contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+    setStatus("Message Sent!");
+    let result = await response.json();
+    console.log(result.status);
+    details = {
+      name: (name.value = ""),
+      email: (email.value = ""),
+      message: (message.value = ""),
+    };
+    console.log("Thanks!");
+    document.getElementById("leo").classList.add("hidden");
+    document.getElementById("leo-thank-you").classList.remove("hidden");
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
+  };
   return (
     <div id="contact" className="contact-container">
       <div className="contact--content">
@@ -34,7 +63,8 @@ export default function Contact() {
             </a>
 
             <a
-              href="https://github.com/leodeleonkc"
+              href="#hero"
+              // href="https://github.com/leodeleonkc"
               rel="noreferrer"
               target="_blank"
               aria="A link to Leo's GitHub profile"
@@ -62,14 +92,14 @@ export default function Contact() {
           </div>
         </div>
         <div className="contact--form">
-          <form action="thankyou/thanks" method="POST" name="contact">
+          <form onSubmit={handleSubmit}>
             <input
               className="contact--input"
               type="hidden"
               name="form-name"
               value="contact"
             />
-            <label for="name" className="hidden">
+            <label htmlFor="name" className="hidden">
               name
             </label>
             <input
@@ -80,10 +110,8 @@ export default function Contact() {
               placeholder="name"
               autocomplete="off"
               required=""
-              value={name}
-              onChange={(e) => setName(e.target.value)}
             />
-            <label className="hidden" for="email">
+            <label className="hidden" htmlFor="email">
               email
             </label>
             <input
@@ -93,10 +121,8 @@ export default function Contact() {
               id="email"
               placeholder="email"
               required=""
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
             />
-            <label className="hidden" for="message" autocomplete="off">
+            <label className="hidden" htmlFor="message" autocomplete="off">
               message
             </label>
             <textarea
@@ -107,13 +133,8 @@ export default function Contact() {
               required=""
             ></textarea>
             <div class="submit-container">
-              <button
-                className="send--btn"
-                type="submit"
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-              >
-                SEND MESSAGE
+              <button className="send--btn" type="submit">
+                {status}
               </button>
             </div>
           </form>

@@ -25,6 +25,10 @@ p {
 }
 
 /* Hero Section + Page Settings -------------------- */
+.hero-container {
+  height: 100vh;
+  min-height: 960px;
+}
 
 .hero--nav {
   display: none;
@@ -44,7 +48,8 @@ p {
 }
 
 .hero--link:hover {
-  color: #ff4848;
+  /* color: #ff4848; */
+  text-decoration: underline 5.5px #ffd371;
 }
 
 .hero-container,
@@ -61,16 +66,36 @@ p {
   margin: auto;
 }
 
-.hero-container {
-  min-height: 100vh;
-}
-
 .hero--content,
 .about--content,
 .toolkit--content,
 .contact--content {
   display: flex;
   flex-direction: column;
+}
+
+.hero--resume-btn {
+  border: none;
+  font-family: inherit;
+  font-size: 1rem;
+  width: 144px;
+  height: 38px;
+  background: #ff4848;
+  margin-bottom: 3em;
+  letter-spacing: 0.018rem;
+  transition: 300ms;
+  color: white;
+  text-transform: uppercase;
+}
+
+.hero--resume-btn:hover,
+.hero--resume-btn:active,
+.send--btn:hover,
+.send--btn:active {
+  background: black;
+  color: white;
+  cursor: pointer;
+  transform: translateY(-0.1vh);
 }
 
 .hello {
@@ -108,8 +133,14 @@ hr {
   text-align: center;
 }
 
-.hero--headshot > img {
+.leo-headshot {
   width: 214.87px;
+  padding-top: 1em;
+  transition: 0.25s;
+}
+
+.leo-thanks {
+  width: 314.87px;
   padding-top: 1em;
   transition: 0.25s;
 }
@@ -117,14 +148,14 @@ hr {
 /* Down Arrow Animated */
 .hero--down-arrow {
   position: absolute;
-  bottom: 1.5%;
-  z-index: -10;
+  bottom: 3%;
+  z-index: -1;
   text-align: center;
-  -webkit-animation: bounce 2s infinite ease-in-out;
-  -o-animation: bounce 2s infinite ease-in-out;
-  -ms-animation: bounce 2s infinite ease-in-out;
-  -moz-animation: bounce 2s infinite ease-in-out;
-  animation: bounce 2s infinite ease-in-out;
+  -webkit-animation: bounce 1.5s infinite ease-in-out;
+  -o-animation: bounce 1.5s infinite ease-in-out;
+  -ms-animation: bounce 1.5s infinite ease-in-out;
+  -moz-animation: bounce 1.5s infinite ease-in-out;
+  animation: bounce 1.5s infinite ease-in-out;
 }
 
 @-webkit-keyframes bounce {
@@ -167,8 +198,9 @@ header nav {
 }
 header nav ul {
   list-style-type: none;
+  padding: 0;
   position: absolute;
-  margin: 60% auto auto 46%;
+  margin: 50% auto auto 50%;
   transition: all 0.3s ease-in-out;
   transform: translateX(-50%);
 }
@@ -187,7 +219,8 @@ header nav ul li a {
   transition: all 0.2s ease-in-out;
 }
 header nav ul li a:hover,
-header nav ul li a:active {
+header nav ul li a:active,
+header nav ul li a:visited {
   color: #9ddac6;
 }
 
@@ -232,6 +265,12 @@ header nav ul li a:active {
 #toggle:checked + label.toggle-btn .bar {
   background-color: #ffd371;
 }
+
+#toggle:checked + label.toggle-btn {
+  position: fixed;
+  z-index: 10;
+}
+
 #toggle:checked + label.toggle-btn .bar:nth-child(2) {
   transform: translateX(50px);
   opacity: 0;
@@ -269,11 +308,27 @@ header nav ul li a:active {
   align-items: center;
   justify-content: center;
 }
+
 .projects--project > img {
   max-width: 100%;
   max-height: 100%;
   padding-bottom: 3em;
-  transition: 0.25s;
+}
+
+.projects--project > img:nth-child(1) {
+  transition-duration: 0.5s;
+}
+
+.projects--project > img:nth-child(2) {
+  transition-duration: 0.7s;
+}
+
+.projects--project > img:nth-child(3) {
+  transition-duration: 0.9s;
+}
+
+.projects--project > img:nth-child(4) {
+  transition-duration: 1.1s;
 }
 
 /* About Me Section ----------------------- */
@@ -390,16 +445,11 @@ header nav ul li a:active {
   width: 144px;
   height: 38px;
   background: #ffd371;
+  color: black;
   margin-bottom: 3em;
-  letter-spacing: 0.012rem;
+  letter-spacing: 0.018rem;
   transition: 300ms;
-}
-
-.send--btn:hover,
-.send--btn:active {
-  background: black;
-  color: white;
-  cursor: pointer;
+  text-transform: uppercase;
 }
 
 /* Footer Section ---------------------- */
@@ -494,9 +544,14 @@ header nav ul li a:active {
     padding-left: 3em;
   }
 
-  .hero--headshot > img {
+  .leo-headshot {
     padding: 0 0 0 2rem;
     width: 260px;
+  }
+
+  .leo-thanks {
+    padding: 0 0 0 0.5rem;
+    width: 380px;
   }
 
   .projects-container {
@@ -598,9 +653,14 @@ header nav ul li a:active {
     max-width: 160px;
   }
 
-  .hero--headshot > img {
-    padding: 0 0 0 12rem;
+  .leo-headshot {
+    padding: 0 0 0 12rem !important;
     width: 308.67px;
+  }
+
+  .leo-thanks {
+    padding: 0 0 0 7rem;
+    width: 480px;
   }
 
   .about--image > img {
