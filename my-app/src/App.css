@@ -415,15 +415,15 @@ header nav ul li a:visited {
 }
 
 .contact--input {
-  margin-bottom: 1em;
+  margin-bottom: 0.8em;
   height: 2.5rem;
   padding-left: 1rem;
-  width: 93%;
+  width: 95%;
   border: 1.8px solid #ffd371;
-  border-radius: 11px;
+  border-radius: 5px;
   font-family: inherit;
-  font-weight: 600;
-  font-size: 1.5rem;
+  font-weight: 500;
+  font-size: 1.2rem;
   letter-spacing: 0.012rem;
   color: #1a1a1a;
 }
@@ -520,7 +520,20 @@ header nav ul li a:visited {
   }
 
   .contact--input {
+    margin-bottom: 1em;
+    height: 2.5rem;
+    padding-left: 1rem;
     width: 97%;
+    border-radius: 7px;
+    font-size: 1.5rem;
+    letter-spacing: 0.012rem;
+  }
+
+  .contact--msg {
+    font-size: 1.5rem;
+    padding-top: 0.5rem;
+    height: 11.75rem;
+    resize: none;
   }
 }
 

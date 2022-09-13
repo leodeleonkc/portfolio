@@ -16,7 +16,7 @@ export default function Contact() {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("http://localhost:5006/components/Contact", {
+    let response = await fetch("http://localhost:5002/components/Contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
@@ -63,8 +63,7 @@ export default function Contact() {
             </a>
 
             <a
-              href="#hero"
-              // href="https://github.com/leodeleonkc"
+              href="https://github.com/leodeleonkc"
               rel="noreferrer"
               target="_blank"
               aria="A link to Leo's GitHub profile"
