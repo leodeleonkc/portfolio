@@ -410,7 +410,7 @@ header nav ul li a:visited {
 }
 
 .contact--form {
-  margin: 2em auto;
+  margin: 2em 0 0 -1em;
   width: 90%;
 }
 
@@ -520,11 +520,9 @@ header nav ul li a:visited {
   }
 
   .contact--input {
-    margin-bottom: 1em;
     height: 2.5rem;
     padding-left: 1rem;
     width: 97%;
-    border-radius: 7px;
     font-size: 1.5rem;
     letter-spacing: 0.012rem;
   }
@@ -696,6 +694,9 @@ header nav ul li a:visited {
 
   .toolkit--item {
     padding: 2rem 3.5rem;
+  }
+  .contact--form {
+    margin: 2em 0;
   }
 
   .contact--description {

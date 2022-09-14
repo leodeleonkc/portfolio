@@ -1,6 +1,4 @@
 import { useState } from "react";
-import { useForm } from "react-hook-form";
-import emailjs from "@emailjs/browser";
 import linkedin from "../images/linkedin.svg";
 import github from "../images/github.svg";
 import youtube from "../images/youtube.svg";
@@ -8,30 +6,30 @@ import youtube from "../images/youtube.svg";
 export default function Contact() {
   const [status, setStatus] = useState("Send Message");
 
-  const { register, handleSubmit, reset } = useForm();
-
-  const onSubmit = async (data) => {
-    const { name, email, message } = data;
+  const handleSubmit = async (e) => {
+    e.preventDefault();
     setStatus("Sending...");
 
-    try {
-      const templateParams = {
-        name,
-        email,
-        message,
-      };
-
-      await emailjs.send(
-        process.env.REACT_APP_SERVICE_ID,
-        process.env.REACT_APP_TEMPLATE_ID,
-        templateParams,
-        process.env.REACT_APP_KEY
-      );
-      reset();
-    } catch (e) {
-      console.log(e);
-    }
-
+    const { name, email, message } = e.target.elements;
+    let details = {
+      name: name.value,
+      email: email.value,
+      message: message.value,
+    };
+    let response = await fetch("http://localhost:5006/components/Contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json;charset=utf-8",
+      },
+      body: JSON.stringify(details),
+    });
+    let result = await response.json();
+    console.log(result.status);
+    details = {
+      name: (name.value = ""),
+      email: (email.value = ""),
+      message: (message.value = ""),
+    };
     setStatus("Message Sent!");
     console.log("Thanks!");
     document.getElementById("leo").classList.add("hidden");
@@ -92,7 +90,7 @@ export default function Contact() {
           </div>
         </div>
         <div className="contact--form">
-          <form onSubmit={handleSubmit(onSubmit)}>
+          <form onSubmit={handleSubmit}>
             <input
               className="contact--input"
               type="hidden"
@@ -106,13 +104,10 @@ export default function Contact() {
               className="contact--input"
               type="text"
               name="name"
-              {...register("name", {
-                required: true,
-              })}
               id="name"
               placeholder="name"
               autocomplete="off"
-              required="Please enter your name"
+              required=""
             />
             <label className="hidden" htmlFor="email">
               email
@@ -121,14 +116,9 @@ export default function Contact() {
               className="contact--input"
               type="email"
               name="email"
-              {...register("email", {
-                required: true,
-                pattern:
-                  /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/,
-              })}
               id="email"
               placeholder="email"
-              required="Please enter a valid email address"
+              required=""
             />
             <label className="hidden" htmlFor="message" autocomplete="off">
               message
@@ -136,12 +126,9 @@ export default function Contact() {
             <textarea
               className="contact--input contact--msg"
               name="message"
-              {...register("message", {
-                required: true,
-              })}
               id="message"
               placeholder="message"
-              required="Please enter a valid message"
+              required=""
             ></textarea>
             <div class="submit-container">
               <button className="send--btn" type="submit">
