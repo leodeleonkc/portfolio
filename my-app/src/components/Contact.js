@@ -16,14 +16,13 @@ export default function Contact() {
       email: email.value,
       message: message.value,
     };
-    let response = await fetch("http://localhost:5002/components/Contact", {
+    let response = await fetch("http://localhost:5006/components/Contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json;charset=utf-8",
       },
       body: JSON.stringify(details),
     });
-    setStatus("Message Sent!");
     let result = await response.json();
     console.log(result.status);
     details = {
@@ -31,6 +30,7 @@ export default function Contact() {
       email: (email.value = ""),
       message: (message.value = ""),
     };
+    setStatus("Message Sent!");
     console.log("Thanks!");
     document.getElementById("leo").classList.add("hidden");
     document.getElementById("leo-thank-you").classList.remove("hidden");
@@ -46,7 +46,8 @@ export default function Contact() {
             If you consider me a good candidate for an{" "}
             <span className="red">open position</span>, or if you'd like to
             discuss a freelance project, else if you just want to{" "}
-            <span className="red">say hello</span>, please drop me a message!
+            <span className="red">say hello</span>, contact me on social media,
+            or send me a message!
           </p>
           <div className="contact--icons">
             <a
@@ -66,7 +67,6 @@ export default function Contact() {
               href="https://github.com/leodeleonkc"
               rel="noreferrer"
               target="_blank"
-              aria="A link to Leo's GitHub profile"
             >
               <img
                 className="contact--item"
@@ -79,7 +79,6 @@ export default function Contact() {
               href="https://www.youtube.com/channel/UCqEAmChJTWZrJ0Odh4jrkwg"
               rel="noreferrer"
               target="_blank"
-              aria="A link to Leo's YouTube channel"
             >
               {" "}
               <img

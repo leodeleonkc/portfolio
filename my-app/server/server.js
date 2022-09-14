@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 app.use("/", router);
-app.listen(5002, () => console.log("Server Running"));
+app.listen(5006, () => console.log("Server Running"));
 
 const contactEmail = nodemailer.createTransport({
   service: "gmail",
@@ -31,7 +31,7 @@ contactEmail.verify((error) => {
   }
 });
 
-router.post("/components/contact", (req, res) => {
+router.post("/contact", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message;
