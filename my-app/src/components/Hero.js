@@ -63,8 +63,13 @@ export default function Hero() {
                 </a>
               </li>
               <li>
-                <a onClick={checkBox} href="#resume">
-                  Resumé
+                <a
+                  onClick={checkBox}
+                  href="https://drive.google.com/file/d/1ZbVqUxlJcA86bLhIXND2oe9UK0YyAusI/view?usp=sharing"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Résumé
                 </a>
               </li>
             </ul>
@@ -81,8 +86,13 @@ export default function Hero() {
         <a href="#contact" className="hero--link">
           Contact
         </a>
-        <a href="#root" className="hero--link">
-          <button className="hero--resume-btn">Resumé</button>
+        <a
+          className="hero--link"
+          href="https://drive.google.com/file/d/1ZbVqUxlJcA86bLhIXND2oe9UK0YyAusI/view?usp=sharing"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <button className="hero--resume-btn">Résumé</button>
         </a>
       </div>
       <FadeInHero>

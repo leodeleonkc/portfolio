@@ -408,6 +408,17 @@ header nav ul li a:visited {
   justify-content: space-around;
   transition: 2.5s;
 }
+.contact--item {
+  transition-duration: 300ms;
+}
+.contact--item:hover {
+  transform: translateY(-3px);
+  cursor: pointer;
+}
+
+.contact-item:active {
+  transform: translateY(0px);
+}
 
 .contact--form {
   margin: 2em 0 0 -1em;
