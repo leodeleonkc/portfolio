@@ -1,13 +1,9 @@
 import { useState } from "react";
 import { useRef } from "react";
 import { useEffect } from "react";
-import headshot from "../images/headshot.svg";
+import headshot from "../images/headshot.png";
 import thankYou from "../images/thank-you-headshot.svg";
 import downArrow from "../images/down-arrow.svg";
-
-console.log(
-  "I see you peeking... it's ok, I expected you to. I worked hard to make sure there were no errors showing up here, and as far as I know, there aren't any. Let me know if you happen to get one. This web-app was built from the ground up, starting with the Figma design, all the way to the React code. Make sure you check out the videos for the projects, I made them short so they're easy to digest, but tried to convey what I considered the most important aspects of each project, including this portfolio site. Thanks for peeking..."
-);
 
 function FadeInHero(props) {
   const [isVisible, setVisible] = useState(false);

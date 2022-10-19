@@ -112,7 +112,7 @@ export default function Contact() {
               id="name"
               placeholder="name"
               autocomplete="off"
-              required="Please enter your name"
+              required="Please enter your name."
             />
             <label className="hidden" htmlFor="email">
               email
