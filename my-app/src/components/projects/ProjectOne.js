@@ -32,40 +32,30 @@ export default function ProjectOne() {
         />
       </div>
       <div className="project-x-inner">
-        <div className="project-x-movie"></div>
         {playVideo ? (
-          <iframe
-            width="100%"
-            max-width="785px"
-            height="785px"
-            src="https://www.youtube.com/embed/3jArJkOi3lc?autoplay=1&rel=0"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowfullscreen="allowfullscreen"
-            mozallowfullscreen="mozallowfullscreen"
-            msallowfullscreen="msallowfullscreen"
-            oallowfullscreen="oallowfullscreen"
-            webkitallowfullscreen="webkitallowfullscreen"
-          ></iframe>
+          <div className="project-x-movie">
+            <iframe
+              max-width="785px"
+              max-height="785px"
+              src="https://www.youtube.com/embed/3jArJkOi3lc?autoplay=1&rel=0"
+              title="YouTube video player"
+              // frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen="allowfullscreen"
+              mozallowfullscreen="mozallowfullscreen"
+              msallowfullscreen="msallowfullscreen"
+              oallowfullscreen="oallowfullscreen"
+              webkitallowfullscreen="webkitallowfullscreen"
+            ></iframe>
+          </div>
         ) : (
           <img
+            className="project-x-img"
             onClick={() => setVideo(true)}
-            className="project-x-movie"
             src={movie1}
             alt="Watch the movie"
           />
         )}
-
-        {/* <ModalVideo
-          channel="youtube"
-          isOpen={isOpen}
-          videoId="QRQpk6MIp_Q"
-          mute="1"
-          autoplay="1"
-          showinfo="0"
-          onClose={() => setOpen(false)}
-        /> */}
 
         <h1>01</h1>
         <h1>PORTFOLIO PROJECT</h1>
