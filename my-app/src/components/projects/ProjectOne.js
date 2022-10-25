@@ -74,71 +74,84 @@ export default function ProjectOne() {
               Hello! My name is Leo de Leon, and this is my portfolio project.
             </p>
             <br></br>
+            <br></br>
             <p>
               <strong>
                 <i>How did I build it?</i>
               </strong>
             </p>
+            <br></br>
             <p>
               This is the first React website I’ve ever made, and I created it
               after only one week of React training.
             </p>
+            <br></br>
             <p>
-              Yes… it’s mostly a static website, but I built it using “build
-              react app” on VS Code and local server. I am particularly proud of
-              this project because I have been planning it since the day I began
-              learning to code, so having built it from the ground up was a
-              major milestone for me.
+              Yes… it’s mostly a static website, but I built it using npm
+              create-react-app on VS Code and local server. I am particularly
+              proud of this project because I have been planning it since the
+              day I began learning to code, so having built it from the ground
+              up was a major milestone for me.
             </p>
+            <br></br>
             <br></br>
             <p>
               <strong>
                 <i>What problem did I set out to fix?</i>
               </strong>
             </p>
+            <br></br>
             <p>
               It is important to have a creative way to showcase my work, so I
               wanted something minimalist, well designed, and highly functional.
             </p>
+            <br></br>
             <br></br>
             <p>
               <strong>
                 <i>What were some of the design decisions?</i>
               </strong>
             </p>
+            <br></br>
             <p>
               Like so many things, it all started with some inspiration. I
               looked at dozens, if not hundreds of portfolio websites, and while
               many of them were incredibly inspiring, I decided to keep things
               simple from the beginning.
             </p>
+            <br></br>
             <p>
               I created the design in Figma, and had a lot of really great
               feedback from both designers and developers. After hours of design
               work, tweaks and tests, I was ready to build.
             </p>
             <br></br>
+            <br></br>
             <p>
               <strong>
                 <i>What packages did I use to solve challenges?</i>
               </strong>
             </p>
+            <br></br>
             <p>
               I utilized several packages to make the web app work properly.
               JSemail was a life saver so my contact form would work without
               needing to set up a backend.
             </p>
+            <br></br>
             <p>
               I created a hamburger menu entirely in CSS, and utilized a scroll
               detect function within React to display content on scroll, and
               only once per page load.
             </p>
             <br></br>
+            <br></br>
             <p>
               <strong>
                 <i>What did I learn?</i>
               </strong>
             </p>
+            <br></br>
             <p>
               I learned that React is meant to make my work easier and less
               repetitive. At times it was frustrating because I was overthinking
@@ -149,19 +162,23 @@ export default function ProjectOne() {
               in the DOM.
             </p>{" "}
             <br></br>
+            <br></br>
             <p>
               <strong>
                 <i>What will I do differently next time?</i>
               </strong>
             </p>{" "}
             <p>
+              <br></br>
               If I were to start this project over, I would have made sure I
               completely understood the concept of props and passing information
               from one component to another, and would’ve spent less time trying
               to figure out how to set up an email server on express and node.js
               which was completely unnecessary for this project and would’ve
               saved me a lot of time.
-            </p>
+            </p>{" "}
+            <br></br>
+            <br></br>
             <p>
               If you think I’m a good fit for your company, please be sure to
               reach out via the contact form on my website, where you can also
