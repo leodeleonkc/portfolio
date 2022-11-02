@@ -2,10 +2,12 @@ import { useState, useContext } from "react";
 import { Context } from "../Context.js";
 import ProjectOne from "./projects/ProjectOne";
 import ProjectTwo from "./projects/ProjectTwo";
+import ProjectThree from "./projects/ProjectThree";
 
 import "../App.css";
 import project1 from "../images/portfolio-webapp.png";
 import project2 from "../images/petfinder-webapp.png";
+import project3 from "../images/yooshi-webapp.png";
 
 import projectComingSoon from "../images/project-coming-soon.svg";
 
@@ -45,8 +47,9 @@ export default function Projects() {
                 alt="Project 2 Showcase"
               ></img>
               <img
+                onClick={() => handleClick("three")}
                 className="projects--img"
-                src={projectComingSoon}
+                src={project3}
                 alt="Project 3 Showcase"
               ></img>
               <img
@@ -61,6 +64,8 @@ export default function Projects() {
         <ProjectOne />
       ) : !isClosed && whatProject === "two" ? (
         <ProjectTwo />
+      ) : !isClosed && whatProject === "three" ? (
+        <ProjectThree />
       ) : (
         <h1>Test</h1>
       )}
