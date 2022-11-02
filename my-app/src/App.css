@@ -320,7 +320,7 @@ header nav ul li a:visited {
 .projects--img:hover {
   transform: translateY(-4px);
   cursor: pointer;
-  filter: drop-shadow(4px 4px 0 rgb(45, 45, 45));
+  filter: drop-shadow(4px 4px 0 #354d44);
 }
 
 .projects--project:nth-child(1) {

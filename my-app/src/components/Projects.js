@@ -66,9 +66,7 @@ export default function Projects() {
         <ProjectTwo />
       ) : !isClosed && whatProject === "three" ? (
         <ProjectThree />
-      ) : (
-        <h1>Test</h1>
-      )}
+      ) : null}
     </div>
   );
 }
