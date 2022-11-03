@@ -6,11 +6,12 @@ import movie from "../../images/movie-place-holder.jpg";
 import closeTabTop from "../../images/close-tab-top.svg";
 
 import closeTab from "../../images/close-tab.svg";
-// import "./modal-video.css";
 
 export default function ProjectOne() {
-  // const [isOpen, setOpen] = useState(false);
-  const [playVideo, setVideo] = useState(false);
+  // const [playVideo, setVideo] = useState(false);
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   const { setIsClosed } = useContext(Context);
   function handleClose() {
@@ -61,15 +62,25 @@ export default function ProjectOne() {
         <div className="project-x-main-text">
           <div className="project-x-main-text-inner">
             <div className="project-x-links">
-              <a href="https://www.leodeleon.co/petfinder" target="_blank">
-                <button className="close-btn">Live</button>
-              </a>
-              <a
-                href="https://github.com/leodeleonkc/PetFinder/tree/main/my-app"
-                target="_blank"
+              <button
+                onClick={() =>
+                  openInNewTab("https://www.leodeleon.co/petfinder")
+                }
+                className="close-btn"
               >
-                <button className="close-btn">repo</button>
-              </a>
+                Live
+              </button>
+
+              <button
+                onClick={() =>
+                  openInNewTab(
+                    "https://github.com/leodeleonkc/PetFinder/tree/main/my-app"
+                  )
+                }
+                className="close-btn"
+              >
+                repo
+              </button>
             </div>
             <p>
               The Pet Finder project is a web app that allows users to search
@@ -87,7 +98,7 @@ export default function ProjectOne() {
             <br></br>
             <p>
               This web app was built using HTML/CSS and React JS via the
-              build-react-app npm. The search results are fetched from the
+              create-react-app npm. The search results are fetched from the
               petfinder.com API which pulls data from 11,500 shelters across the
               nation in real time. These are real pets up for adoption.{" "}
             </p>

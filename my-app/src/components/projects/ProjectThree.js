@@ -12,8 +12,12 @@ import closeTab from "../../images/close-tab.svg";
 
 export default function ProjectOne() {
   // const [playVideo, setVideo] = useState(false);
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   const { setIsClosed } = useContext(Context);
+
   function handleClose() {
     setIsClosed(true);
     setTimeout(() => {
@@ -62,15 +66,23 @@ export default function ProjectOne() {
         <div className="project-x-main-text">
           <div className="project-x-main-text-inner">
             <div className="project-x-links">
-              <a href="https://www.leodeleon.co/yooshi" target="_blank">
-                <button className="close-btn">Live</button>
-              </a>
-              <a
-                href="https://github.com/leodeleonkc/yooshi_japanese/tree/main/my-app"
-                target="_blank"
+              <button
+                onClick={() => openInNewTab("https://www.leodeleon.co/yooshi")}
+                className="close-btn"
               >
-                <button className="close-btn">repo</button>
-              </a>
+                Live
+              </button>
+
+              <button
+                onClick={() =>
+                  openInNewTab(
+                    "https://github.com/leodeleonkc/yooshi_japanese/tree/main/my-app"
+                  )
+                }
+                className="close-btn"
+              >
+                repo
+              </button>
             </div>
             <p>
               The Yooshi Japanese Cuisine project is a functional restaurant web

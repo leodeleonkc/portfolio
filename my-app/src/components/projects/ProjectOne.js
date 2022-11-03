@@ -1,17 +1,17 @@
 import "./projects.css";
 import "../../App.css";
 import { useContext, useState } from "react";
-// import ModalVideo from "react-modal-video";
 import { Context } from "../../Context.js";
 import movie1 from "../../images/video1.jpg";
 import closeTabTop from "../../images/close-tab-top.svg";
 
 import closeTab from "../../images/close-tab.svg";
-// import "./modal-video.css";
 
 export default function ProjectOne() {
-  // const [isOpen, setOpen] = useState(false);
   const [playVideo, setVideo] = useState(false);
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
 
   const { setIsClosed } = useContext(Context);
   function handleClose() {
@@ -62,13 +62,14 @@ export default function ProjectOne() {
         <div className="project-x-main-text">
           <div className="project-x-main-text-inner">
             <div className="project-x-links">
-              {/* <button className="close-btn">live</button> */}
-              <a
-                href="https://github.com/leodeleonkc/portfolio"
-                target="_blank"
+              <button
+                onClick={() =>
+                  openInNewTab("https://github.com/leodeleonkc/portfolio")
+                }
+                className="close-btn"
               >
-                <button className="close-btn">repo</button>
-              </a>
+                repo
+              </button>
             </div>
             <p>
               Hello! My name is Leo de Leon, and this is my portfolio project.
