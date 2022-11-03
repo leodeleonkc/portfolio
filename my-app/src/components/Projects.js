@@ -18,7 +18,7 @@ export default function Projects() {
     window.open(url, "_blank", "noopener,noreferrer");
   };
 
-  console.log(whatProject);
+  // console.log(whatProject);
 
   function handleClick(p) {
     setWhatProject(p);
