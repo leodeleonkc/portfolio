@@ -1,6 +1,10 @@
 import aboutMe from "../images/about-me.png";
 
 export default function About() {
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <div id="about" className="about-container">
       <div className="about--content">
@@ -12,7 +16,19 @@ export default function About() {
           <hr className="about--hr" />
           <p>
             Hello again! Thank you for scrolling this far. I recently graduated{" "}
-            <span className="red">Scrimba Front End Developer Career Path</span>{" "}
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() =>
+                openInNewTab(
+                  "https://scrimba.com/certificate/uWRDMWuy/gfrontend"
+                )
+              }
+              className="red"
+            >
+              Scrimba Front End Developer Career Path
+            </span>{" "}
             bootcamp.{" "}
           </p>
           <p>
