@@ -37,7 +37,7 @@ export default function ProjectOne() {
             <iframe
               max-width="785px"
               max-height="785px"
-              src="https://www.youtube.com/embed/3jArJkOi3lc?autoplay=1&rel=0"
+              src="https://www.youtube.com/embed/U_Fhj-KcwQg?autoplay=1&rel=0"
               title="YouTube video player"
               // frameborder="0"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

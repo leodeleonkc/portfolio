@@ -14,9 +14,6 @@ import projectComingSoon from "../images/project-coming-soon.svg";
 export default function Projects() {
   const [whatProject, setWhatProject] = useState("");
   const { isClosed, setIsClosed } = useContext(Context);
-  const openInNewTab = (url) => {
-    window.open(url, "_blank", "noopener,noreferrer");
-  };
 
   // console.log(whatProject);
 
