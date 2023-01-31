@@ -18,6 +18,7 @@ function FadeInHero(props) {
     });
     observer.observe(domRef.current);
   }, []);
+
   return (
     <div className={`fade-in ${isVisible ? "is-visible" : ""}`} ref={domRef}>
       {props.children}
@@ -26,6 +27,9 @@ function FadeInHero(props) {
 }
 
 export default function Hero() {
+  const openInNewTab = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
   function checkBox() {
     const navCheckBox = document.getElementById("toggle");
     navCheckBox.checked = !navCheckBox.checked;
@@ -101,14 +105,19 @@ export default function Hero() {
               <span className="red">software developer</span> with a strong
               background in motion graphics design and a passion for creating
               memorable and engaging{" "}
-              <span className="red">
-                web experiences with <strong>React</strong>
-              </span>
-              .
+              <span className="red">web experiences with React</span>.
               <p>
-                I am <span className="red">currently seeking</span> a frontend
-                developer position. Scroll down to see my latest work and find
-                out more about me!
+                I am currently a frontend developer for{" "}
+                <span
+                  style={{
+                    cursor: "pointer",
+                  }}
+                  onClick={() => openInNewTab("https://www.silks.io")}
+                  className="red"
+                >
+                  Game of Silks
+                </span>
+                . Scroll down to learn more about me!
               </p>
             </p>
           </div>
