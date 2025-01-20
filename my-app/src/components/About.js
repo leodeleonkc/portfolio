@@ -15,7 +15,7 @@ export default function About() {
           <h1 className="title">About Me 👨🏻‍💻</h1>
           <hr className="about--hr" />
           <p>
-            Hello again! Thank you for scrolling this far. I recently graduated{" "}
+            Hello again! Thank you for scrolling this far. I graduated the{" "}
             <span
               style={{
                 cursor: "pointer",
@@ -29,7 +29,17 @@ export default function About() {
             >
               Scrimba Front End Developer Career Path
             </span>{" "}
-            bootcamp.{" "}
+            in 2022, and in December of '24 I got certified as a{" "}
+            <span
+              style={{
+                cursor: "pointer",
+              }}
+              onClick={() => openInNewTab("https://bcert.me/sgmraylzw")}
+              className="red"
+            >
+              ScrumMaster
+            </span>
+            .{" "}
           </p>
           <p>
             When I'm not coding, I am building miniatures and

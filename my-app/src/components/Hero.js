@@ -107,17 +107,9 @@ export default function Hero() {
               memorable and engaging{" "}
               <span className="red">web experiences with React</span>.
               <p>
-                I am currently a frontend developer for{" "}
-                <span
-                  style={{
-                    cursor: "pointer",
-                  }}
-                  onClick={() => openInNewTab("https://www.silks.io")}
-                  className="red"
-                >
-                  Game of Silks
-                </span>
-                . Scroll down to learn more about me!
+                I am currently a frontend engineer for{" "}
+                <span className="red">Game of Silks</span>. Scroll down to learn
+                more about me!
               </p>
             </p>
           </div>
