@@ -290,7 +290,7 @@ header nav ul li a:visited {
 .projects-container {
   max-width: 1200px;
   margin: auto;
-  background: #ffd371;
+  background: #9ddac6;
   margin-top: 3em;
 }
 
@@ -585,7 +585,7 @@ header nav ul li a:visited {
   }
 
   .projects-container {
-    background: url(./images/blob-bg.svg) no-repeat center;
+    background: url(./images/blob-bg-2.svg) no-repeat center;
     margin-top: 4em;
     background-size: 90%;
   }

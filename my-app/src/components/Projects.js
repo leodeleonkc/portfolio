@@ -8,6 +8,7 @@ import "../App.css";
 import project1 from "../images/portfolio-webapp.png";
 import project2 from "../images/petfinder-webapp.png";
 import project3 from "../images/yooshi-webapp.png";
+import project4 from "../images/chefdaddy-webapp.png";
 
 import projectComingSoon from "../images/project-coming-soon.svg";
 
@@ -31,7 +32,7 @@ export default function Projects() {
         <div className="projects-container">
           <div className="projects--inner">
             <p className="projects--title">
-              <span className="red">Click on any project to learn more.</span>
+              <span className="">Click on any project to learn more.</span>
             </p>
             <div className="projects--project">
               <img
@@ -52,9 +53,17 @@ export default function Projects() {
                 src={project3}
                 alt="Project 3 Showcase"
               ></img>
-              <img
+              {/* <img
                 className="projects--img"
                 src={projectComingSoon}
+                alt="Project 4 Showcase"
+              ></img> */}
+              <img
+                onClick={() =>
+                  window.open("https://www.leodeleon.co/chefdaddy", "_blank")
+                }
+                className="projects--img"
+                src={project4}
                 alt="Project 4 Showcase"
               ></img>
             </div>
