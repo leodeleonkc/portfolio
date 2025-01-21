@@ -1,7 +1,13 @@
 import css from "../images/CSS.svg";
+import Tailwind from "../images/Tailwind.svg";
+
 import html55 from "../images/HTML5.svg";
 import Bootstrap from "../images/Bootstrap.svg";
 import JavaScript from "../images/JavaScript.svg";
+import OpenAI from "../images/openai.svg";
+
+import Next from "../images/next.svg";
+
 import ReactJS from "../images/React.svg";
 import ReactNative from "../images/React-Native.svg";
 
@@ -14,18 +20,21 @@ export default function Toolkit() {
           <hr className="toolkit--hr" />
         </div>
         <div className="toolkit--skills">
-          <img className="toolkit--item" src={css} alt="CSS 3 Logo"></img>
           <img className="toolkit--item" src={html55} alt="HTML 5 Logo"></img>
+          {/* <img className="toolkit--item" src={css} alt="CSS 3 Logo"></img> */}
           <img
             className="toolkit--item"
-            src={Bootstrap}
-            alt="Bootstrap Logo"
+            src={Tailwind}
+            alt="Tailwind CSS Logo"
           ></img>
-          <img
+
+          <img className="toolkit--item" src={OpenAI} alt="OpenAI Logo"></img>
+          {/* <img
             className="toolkit--item"
             src={JavaScript}
             alt="JavaScript Logo"
-          ></img>
+          ></img> */}
+          <img className="toolkit--item" src={Next} alt="NextJS Logo"></img>
           <img
             className="toolkit--item"
             src={ReactJS}
